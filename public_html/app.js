@@ -36,10 +36,10 @@ V:2 clef=bass`,
 
 
 function generateAbc(model, measureArray){
-    let abc = model.header;
+    let abc = model.header + '\n';
 
     for(let measureIndex of measureArray){
-        abc += '\n' + model.measures[measureIndex];
+        abc += model.measures[measureIndex].replace(/\n/g, '');
     }
 
     return abc;
@@ -48,5 +48,5 @@ function generateAbc(model, measureArray){
 const abc = generateAbc(mozartModel(), createRange(0, mozartModel().measures.length));
 console.log(abc);
 
-ABCJS.renderAbc('sheet-music', abc);
+ABCJS.renderAbc('sheet-music', abc, {responsive: true, staffwidth: 1100});
 ABCJS.renderMidi('midi-player', abc);
