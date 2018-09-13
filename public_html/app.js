@@ -36,6 +36,23 @@ V:2 clef=bass`,
                 'g d2|',
                 'G,,/2B,,/2G,B,,|',
             ],
+            [
+                '[g2 d2 B2 G2] z|',
+                //multi note sixteenths look messed up when beamed
+                'G,, [B,/2G,/2] [G,/2F,/2] [^F,/2E,/2] [E,/2D,/2]|',
+            ],
+            [
+                'Gce|',
+                '[C,2 E,2] z|',
+            ],
+            [
+                "e/2c/2e/2g/2c'/2g/2|",
+                '[C,2 G,2] z|',
+            ],
+            [
+                'c2 z|',
+                'C,G,,C,,|',
+            ],
         ],
 };
 }
