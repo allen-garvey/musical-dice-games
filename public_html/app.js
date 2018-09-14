@@ -10,6 +10,7 @@ function createRange(startIndex, endExclusive){
 function mozartModel(){
     return {
         voices: 2,
+        measuresPerLine: 8,
         header: `X:1
 T:Musical Dice Game
 M:3/8
@@ -125,11 +126,14 @@ V:2 clef=bass`,
 
 function generateAbc(model, measureArray){
     let abc = model.header + '\n';
+    const measuresPerLine = model.measuresPerLine;
 
-    for(let voice=0;voice<model.voices;voice++){
-        abc += `[V:${voice+1}]`;
-        for(let measureIndex of measureArray){
-            abc += model.measures[measureIndex][voice];
+    for(let measureOffset=0;measureOffset<measureArray.length;measureOffset+=measuresPerLine){
+        for(let voice=0;voice<model.voices;voice++){
+            abc += `[V:${voice+1}]`;
+            for(let j=0;j<measuresPerLine && j+measureOffset < measureArray.length;j++){
+                abc += model.measures[j+measureOffset][voice];
+            }
         }
     }
 
