@@ -20,6 +20,7 @@ function mozartModel(){
         measuresPerLine: 8,
         header: `X:1
 T:Musical Dice Game
+C:Wolfgang Amadeus Mozart
 M:3/8
 L:1/8
 Q:200
