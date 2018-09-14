@@ -8,6 +8,13 @@ function createRange(startIndex, endExclusive){
 }
 
 function mozartModel(){
+    const cadentialMeasure = [
+        '[g2 d2 B2 G2] z',
+        //multi note sixteenths look messed up when beamed
+        'G,, [B,/2G,/2] [G,/2F,/2] [^F,/2E,/2] [E,/2D,/2]',
+    ];
+
+
     return {
         voices: 2,
         measuresPerLine: 8,
@@ -37,11 +44,7 @@ V:2 clef=bass`,
                 'g d2',
                 'G,,/2B,,/2G,B,,',
             ],
-            [
-                '[g2 d2 B2 G2] z',
-                //multi note sixteenths look messed up when beamed
-                'G,, [B,/2G,/2] [G,/2F,/2] [^F,/2E,/2] [E,/2D,/2]',
-            ],
+            cadentialMeasure,
             [
                 'Gce',
                 '[C,2 E,2] z',
@@ -114,11 +117,7 @@ V:2 clef=bass`,
                 'f/2e/2d/2e/2f/2g/2',
                 'F,/2E,/2D,/2E,/2F,/2G,/2',
             ],
-            [
-                '[g2 d2 B2 G2] z',
-                //multi note sixteenths look messed up when beamed
-                'G,, [B,/2G,/2] [G,/2F,/2] [^F,/2E,/2] [E,/2D,/2]',
-            ],
+            cadentialMeasure,
         ],
 };
 }
