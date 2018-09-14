@@ -147,6 +147,36 @@ V:2 clef=bass`,
                 'Gce',
                 '[E,2 C,2] z',
             ],
+            cadentialMeasure,
+            [
+                'e/2c/2d/2B/2G',
+                'G,2 z',
+            ],
+            [
+                'Ad^f',
+                '[^F,2 D,2] [A, C,]',
+            ],
+            [
+                'A/2e/2d/2g/2^f/2a/2',
+                'C,D,D,,',
+            ],
+            [
+                'g/2b/2g/2d/2B',
+                '[D,2 B,,2] z',
+            ],
+            //doesn't do 16th note beams correctly
+            [
+                'cGe',
+                '[E,/2 C,/2]G,/2 [E,/2 C,/2]G,/2 [E,/2 C,/2]G,/2',
+            ],
+            [
+                'gGG',
+                'B,,/2D,/2G,/2D,/2B,,/2G,,/2',
+            ],
+            [
+                'c/2B/2c/2e/2G/2c/2',
+                '[E,2 C,2] z',
+            ],
         ],
 };
 }
