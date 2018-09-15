@@ -721,7 +721,8 @@ function generateAbc(model, measureArray){
         for(let voice=0;voice<model.voices;voice++){
             abc += `[V:${voice+1}]`;
             for(let j=0;j<measuresPerLine && j+measureOffset < measureArray.length;j++){
-                abc += model.measures[j+measureOffset][voice] + '|';
+                const measure = model.measures[j+measureOffset][voice] || 'z z z';
+                abc += measure + '|';
             }
         }
     }
