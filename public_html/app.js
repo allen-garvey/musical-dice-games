@@ -16,6 +16,11 @@ function mozartModel(){
     //doesn't do 16th note beams correctly
     const albertiBass = '[E,/2 C,/2]G,/2 [E,/2 C,/2]G,/2 [E,/2 C,/2]G,/2';
 
+    const eighthNoteCChordMeasure = [
+        '[cE][cE][cE]',
+        'C,C,C,',
+    ];
+
 
     return {
         voices: 2,
@@ -72,10 +77,7 @@ V:2 clef=bass`,
                 'e/2c/2B/2A/2G/2^F/2',
                 'C,D,D,,',
             ],
-            [
-                '[cE][cE][cE]',
-                'C,C,C,',
-            ],
+            eighthNoteCChordMeasure,
             [
                 'cGE',
                 '[E,2 C,2] z',
@@ -210,6 +212,36 @@ V:2 clef=bass`,
             [
                 "ec/2e/2g/2c'/2",
                 '[G,2 C,2] [E, C,]',
+            ],
+            [
+                'ecG',
+                albertiBass,
+            ],
+            [
+                'ce/2c/2G',
+                '[G,2 E,2] z',
+            ],
+            [
+                'c/2G/2e/2c/2g/2e/2',
+                '[E,2 C,2] z',
+            ],
+            [
+                'd/2^c/2d/2f/2G/2B/2',
+                'F,2 G,',
+            ],
+            [
+                //more bad 16th note beaming
+                '[e c][e/2 c/2][f/2 d/2][g e]',
+                'C,2 z',
+            ],
+            eighthNoteCChordMeasure,
+            [
+                'gbd',
+                '[D,2 B,,2] z',
+            ],
+            [
+                'd/2B/2G z',
+                '[G,2 G,,2] G,',
             ],
         ],
 };
