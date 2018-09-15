@@ -243,6 +243,38 @@ V:2 clef=bass`,
                 'd/2B/2G z',
                 '[G,2 G,,2] G,',
             ],
+            [
+                'ecG',
+                albertiBass,
+            ],
+            [
+                'gec',
+                albertiBass,
+            ],
+            [
+                'gce',
+                albertiBass,
+            ],
+            [
+                'gf/2e/2d/2c/2',
+                '[E,2 C,2] z',
+            ],
+            [
+                'ce/2c/2g',
+                '[G,2 E,2] z',
+            ],
+            [
+                'e/2c/2B/2G/2A/2^F/2',
+                'C,D,D,,',
+            ],
+            [
+                'e/2c/2B/2c/2G',
+                'C,2 z',
+            ],
+            [
+                "e/2g/2c'/2g/2e/2c/2",
+                '[G,2 C,2] [G, C,]',
+            ],
         ],
 };
 }
