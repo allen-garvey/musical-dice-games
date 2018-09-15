@@ -229,8 +229,7 @@ V:2 clef=bass`,
                 'F,2 G,',
             ],
             [
-                //more bad 16th note beaming
-                '[e c][e/2 c/2][f/2 d/2][g e]',
+                '[ec][e/2c/2][f/2d/2][ge]',
                 'C,2 z',
             ],
             eighthNoteCChordMeasure,
@@ -281,7 +280,7 @@ V:2 clef=bass`,
             ],
             [
                 '^faf',
-                '[A, D,][^F, D,][D, C,]',
+                '[A,D,][^F,D,][D,C,]',
             ],
             [
                 '',
@@ -497,7 +496,7 @@ V:2 clef=bass`,
             ],
             [
                 '',
-                '[D, B,,][D, B,,][G, B,,]',
+                '[D,B,,][D,B,,][G,B,,]',
             ],
             cadentialMeasure,
             eighthNoteCChordMeasure,
@@ -517,7 +516,7 @@ V:2 clef=bass`,
             //line 129
             [
                 '',
-                '[D, B,,][D, B,,][G, B,,]',
+                '[D,B,,][D,B,,][G,B,,]',
             ],
             eighthNoteCChordMeasure,
             [
@@ -538,7 +537,7 @@ V:2 clef=bass`,
             ],
             [
                 '',
-                '[D, C,][D, C,][D, C,]',
+                '[D,C,][D,C,][D,C,]',
             ],
             [
                 '',
@@ -559,7 +558,7 @@ V:2 clef=bass`,
             ],
             [
                 '',
-                '[^F, C,][F, C,][A, C,]',
+                '[^F,C,][F,C,][A,C,]',
             ],
             [
                 '',
