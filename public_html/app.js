@@ -491,21 +491,21 @@ V:2 clef=bass`,
             ],
             //line 121
             [
-                '',
+                'db/2g/2d',
                 '[G,2 B,,2] z',
             ],
             [
-                '',
+                'g/2^f/2g/2b/2d',
                 '[D,B,,][D,B,,][G,B,,]',
             ],
             cadentialMeasure,
             eighthNoteCChordMeasure,
             [
-                '',
+                'g/2e/2d/2B/2 G',
                 'G,G,, z',
             ],
             [
-                '',
+                'c/2G/2c/2e/2g/2[e/2c/2]',
                 'E,2 E,/2C,/2',
             ],
             cadentialMeasure,
