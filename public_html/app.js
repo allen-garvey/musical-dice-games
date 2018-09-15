@@ -13,8 +13,7 @@ function mozartModel(){
         //multi note sixteenths look messed up when beamed
         'G,, [B,/2G,/2] [G,/2F,/2] [^F,/2E,/2] [E,/2D,/2]',
     ];
-    //doesn't do 16th note beams correctly
-    const albertiBass = '[E,/2 C,/2]G,/2 [E,/2 C,/2]G,/2 [E,/2 C,/2]G,/2';
+    const albertiBass = '[E,/2C,/2]G,/2[E,/2C,/2]G,/2[E,/2C,/2]G,/2';
 
     const eighthNoteCChordMeasure = [
         '[cE][cE][cE]',
