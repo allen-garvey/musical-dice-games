@@ -293,7 +293,7 @@ V:2 clef=bass`,
                 'B,,2 z',
             ],
             [
-                '',
+                'gec',
                 '[C,2 E,2] z',
             ],
             [
@@ -310,7 +310,7 @@ V:2 clef=bass`,
             ],
             //line 73
             [
-                '',
+                'gec',
                 albertiBass,
             ],
             [
@@ -334,7 +334,7 @@ V:2 clef=bass`,
                 'C,2 C,,',
             ],
             [
-                '',
+                'c2 z',
                 'C,G,,C,,',
             ],
             [
@@ -348,7 +348,7 @@ V:2 clef=bass`,
                 '[G,2 B,,2] [D, B,,]',
             ],
             [
-                '',
+                'c2 z',
                 'C,G,,C,,',
             ],
             [
@@ -360,11 +360,11 @@ V:2 clef=bass`,
                 '[G,2 E,2] z',
             ],
             [
-                '',
+                'ceG',
                 '[G,2 B,,2] z',
             ],
             [
-                '',
+                'gce',
                 '[E,2 C,2] [G, C,]',
             ],
             [
@@ -386,16 +386,16 @@ V:2 clef=bass`,
                 '[G,2 G,,2] G,',
             ],
             [
-                '',
+                'c2 z',
                 'C,G,,C,,',
             ],
             cadentialMeasure,
             [
-                '',
+                'gec',
                 '[C,2 E,2] z',
             ],
             [
-                '',
+                'ecG',
                 'C,2 z',
             ],
             //line 97
@@ -404,11 +404,11 @@ V:2 clef=bass`,
                 '[D,2 B,,2] [G, B,,]',
             ],
             [
-                '',
+                'cGe',
                 albertiBass,
             ],
             [
-                '',
+                '^fad',
                 '[A,2 C,2] [A, C,]',
             ],
             cadentialMeasure,
@@ -451,20 +451,20 @@ V:2 clef=bass`,
                 'C,D,D,,',
             ],
             [
-                '',
+                'c2 z',
                 'C,G,,C,,',
             ],
             [
-                '',
+                'ecG',
                 albertiBass,
             ],
             //line 113
             [
-                '',
+                'fdB',
                 '[B,2 G,2] z',
             ],
             [
-                '',
+                '[d B][d B][d B]',
                 'G,G,G,',
             ],
             [
@@ -512,7 +512,7 @@ V:2 clef=bass`,
             ],
             cadentialMeasure,
             [
-                '',
+                'Bdg',
                 'G,,2 z',
             ],
             //line 129
@@ -522,7 +522,7 @@ V:2 clef=bass`,
             ],
             eighthNoteCChordMeasure,
             [
-                '',
+                'c2 z',
                 'C,G,,C,,',
             ],
             [
@@ -567,7 +567,7 @@ V:2 clef=bass`,
                 '[G,2 B,,2] G,,',
             ],
             [
-                '',
+                'cGe',
                 '[C,2 E,2] z',
             ],
             [
@@ -575,7 +575,7 @@ V:2 clef=bass`,
                 '[D,2 B,,2] [D, B,,]',
             ],
             [
-                '',
+                'gce',
                 albertiBass,
             ],
             //line 145
@@ -683,7 +683,7 @@ V:2 clef=bass`,
                 'C,D,D,,',
             ],
             [
-                '',
+                'c2 z',
                 'C,G,,C,,',
             ],
             [
@@ -691,7 +691,7 @@ V:2 clef=bass`,
                 '[G,2 G,,2] [G, B,,]',
             ],
             [
-                '',
+                'c2 z',
                 'C,G,,C,,',
             ],
             [
@@ -699,7 +699,7 @@ V:2 clef=bass`,
                 'F,2 G,',
             ],
             [
-                '',
+                'Gce',
                 albertiBass,
             ],
             [
