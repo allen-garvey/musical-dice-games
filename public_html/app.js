@@ -7,6 +7,16 @@ function createRange(startIndex, endExclusive){
     return ret;
 }
 
+function arrayRandomChoice(array){
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+function createPermutation(combinations){
+    return combinations.map((item)=>{
+        return arrayRandomChoice(item);
+    });
+}
+
 function mozartModel(){
     const cadentialMeasure = [
         '[g2 d2 B2 G2] z',
@@ -29,7 +39,7 @@ T:Musical Dice Game
 C:Wolfgang Amadeus Mozart
 M:3/8
 L:1/8
-Q:200
+Q:140
 %%staves {1 2}
 K:C
 V:1 clef=treble
@@ -749,7 +759,14 @@ function generateAbc(model, measureArray){
     return abc;
 }
 
-const abc = generateAbc(mozartModel(), createRange(0, mozartModel().measures.length));
+const model = mozartModel();
+// const abc = generateAbc(model, createRange(0, model.measures.length));
+
+const permutation = createPermutation(model.combinations);
+console.log(permutation);
+const abc = generateAbc(model, permutation);
+
+
 console.log(abc);
 
 ABCJS.renderAbc('sheet-music', abc, {responsive: true, staffwidth: 1100});
