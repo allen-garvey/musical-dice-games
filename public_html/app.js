@@ -741,6 +741,60 @@ V:2 clef=bass`,
 };
 }
 
+function haydnModel(){
+    return {
+        voices: 2,
+        measuresPerLine: 8,
+        header: `X:1
+T:Musical Dice Game
+C:Joseph Haydn
+M:3/4
+L:1/4
+Q:120
+%%staves {1 2}
+K:G
+V:1 clef=treble
+V:2 clef=bass`,
+        measures: [
+            [
+                '(d d/2).e/2.f/2.g/2',
+                '(3G,/2B,/2D,/2 (3G,/2B,/2D,/2 (3G,/2B,/2D,/2',
+            ],
+            [
+                '[g3 B3]',
+                'z/2 G,,/2 B,,/2D,/2 G,/2G,,/2'
+            ],
+            [
+                '(3D/2G/2B/2 d d',
+                'z [B,G,] [B,G,]',
+            ],
+            [
+                'd3/2 e/2 d3/4g/4',
+                'z B, G,',
+            ],
+            [
+                '(3d/2B/2d/2 .g/2.g/2 (3g/2d/2B/2',
+                '[B,G,] z [B,G,]',
+            ],
+            [
+                '(g/2f/2) (g/2b/2) (d/2g/2)',
+                '(B,/2D/2) (B,/2D/2) (B,/2D/2)',
+            ],
+            [
+                'g/4f/4e/4d/4 d z',
+                '(3A,/2C,/2D,/2 (3A,/2C,/2D,/2 (3A,/2C,/2D,/2',
+            ],
+            [
+                '[e3 c3]',
+                'z/2 C,/2 E,/2G,/2 C/2C,/2'
+            ],
+        ],
+        combinations: [
+            
+        ],
+};
+}
+
 
 function generateAbc(model, measureArray){
     let abc = model.header + '\n';
@@ -759,12 +813,23 @@ function generateAbc(model, measureArray){
     return abc;
 }
 
+
+/*
 const model = mozartModel();
 // const abc = generateAbc(model, createRange(0, model.measures.length));
 
 const permutation = createPermutation(model.combinations);
 console.log(permutation);
 const abc = generateAbc(model, permutation);
+*/
+
+
+const model = haydnModel();
+const abc = generateAbc(model, createRange(0, model.measures.length));
+
+// const permutation = createPermutation(model.combinations);
+// console.log(permutation);
+// const abc = generateAbc(model, permutation);
 
 
 console.log(abc);
