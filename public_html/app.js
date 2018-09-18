@@ -859,8 +859,9 @@ V:2 clef=bass`,
                 'A g a/4g/4f/4e/4',
                 '^C,/2A,/2 E,/2A,/2 C,/2A,/2',
             ],
+            //multiple voices notated slightly differently to get around bugs in implementation of multiple voices
             [
-                '',
+                '[^c2 G2] [g/2^c]e/2',
                 'z/2 A,,/2 ^C,/2E,/2 A,/2A,,/2',
             ],
             [
@@ -906,7 +907,8 @@ V:2 clef=bass`,
             ],
             [
                 '(3B/2g/2e/2 d ^c',
-                '',
+                //notated slightly differently due to bugs in multiple voices implementation
+                'G, [F A,] E',
             ],
             [
                 'B3/4g/4 [f d] [e ^c]',
@@ -918,7 +920,8 @@ V:2 clef=bass`,
             ],
             [
                 '^d/4e/4g/4e/4 =d T^c',
-                '',
+                //notated slightly differently due to bugs in multiple voices implementation
+                'G, [F A,] E',
             ],
             //measure 41
             [
@@ -1112,11 +1115,13 @@ V:2 clef=bass`,
             ],
             [
                 '(3e/2c/2A/2 G F',
-                '',
+                //multiple voices notated slightly differently to get around bugs in implementation of multiple voices
+                '[C C,] [B, D,] [A,]',
             ],
             [
                 'e/4B/4c/4A/4 G TA',
-                '',
+                //multiple voices notated slightly differently to get around bugs in implementation of multiple voices
+                '[C C,] [B, D,] [C]',
             ],
             //measure 89
             [
@@ -1125,7 +1130,8 @@ V:2 clef=bass`,
             ],
             [
                 'e/4c/4B/4A/4 G F',
-                '',
+                //multiple voices notated slightly differently to get around bugs in implementation of multiple voices
+                '[C C,] [B, D,] [A,]',
             ],
             [
                 'G3',
