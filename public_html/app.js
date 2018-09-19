@@ -1170,6 +1170,116 @@ V:2 clef=bass`,
 };
 }
 
+function cpeBachModel(){
+    return {
+        voices: 2,
+        header: `X:1
+T:Musical Dice Game
+C:C.P.E. Bach
+M:C|
+L:1/4
+Q:120
+%%staves {1 2}
+K:C
+V:1 clef=treble
+V:2 clef=bass`,
+        measures: [
+            [  
+                [
+
+                ],
+                [
+                    
+                ],
+            ],
+            [  
+                [
+
+                ],
+                [
+                    
+                ],
+            ],
+            [  
+                [
+
+                ],
+                [
+                    
+                ],
+            ],
+            [  
+                [
+
+                ],
+                [
+                    
+                ],
+            ],
+            [  
+                [
+
+                ],
+                [
+                    
+                ],
+            ],
+            [  
+                [
+                    'e/2f/2d/2e/2 c2', //this measure is duplicated
+                    'e d/2e/2 c2',
+                    'e/2d/2e/2d/2 c2',
+                    'e/2f/2g/2e/2 c2',
+                    'e/2g/2e/2d/2 c2',
+                    'e/2c/2e/2d/2 c2',
+                    'e3/2 d/2 c2',
+                    `e/2c'/2g/2e/2 c2`,
+                ],
+                [
+                    'C4',
+                ],
+            ],
+        ],
+};
+}
+
+//convert separate treble/bass permutations to single measures
+//the same as haydn and mozart so we can see all of them
+//for debugging only
+function convertCpeBachModelAll(model){
+    function getMeasure(measureArray, index){
+        if(measureArray[index]){
+            return measureArray[index];
+        }
+        return measureArray.length >= 1 ? measureArray[0] : 'z4'; 
+    }
+    
+    const measures = [];
+
+    for(let measureContainer of model.measures){
+        const trebleMeasures = measureContainer[0];
+        const bassMeasures = measureContainer[1];
+        const maxLength = Math.max(trebleMeasures.length, bassMeasures.length);
+
+        for(let i=0;i<maxLength;i++){
+            const measure = [];
+            measure.push(getMeasure(trebleMeasures, i));
+            measure.push(getMeasure(bassMeasures, i));
+
+            measures.push(measure);
+        }
+    }
+
+    console.log(measures);
+
+
+    return {
+        header: model.header,
+        voices: model.voices,
+        measures,
+    };
+}
+
 function getMeasuresPerLine(){
     const width = window.innerWidth;
 
@@ -1228,3 +1338,6 @@ function generateAbcPermutationModelAction(buttonId, model){
 
 generateAbcPermutationModelAction('button-mozart', mozartModel());
 generateAbcPermutationModelAction('button-haydn', haydnModel());
+
+
+displayEntireModel(convertCpeBachModelAll(cpeBachModel()));
