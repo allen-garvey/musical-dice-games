@@ -1211,6 +1211,7 @@ function renderAbc(abc){
     // console.log(abc);
     ABCJS.renderAbc('sheet-music', abc);
     ABCJS.renderMidi('midi-player', abc);
+    ABCJS.renderMidi('midi-player', abc, {generateDownload: true});
 }
 
 function generateAbcPermutationModelAction(buttonId, model){
