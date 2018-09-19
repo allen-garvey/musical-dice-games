@@ -1179,7 +1179,10 @@ function getMeasuresPerLine(){
     if(width >= 800){
         return 4;
     }
-    return 2;
+    if(width >= 600){
+        return 2;
+    }
+    return 1;
 }
 
 
