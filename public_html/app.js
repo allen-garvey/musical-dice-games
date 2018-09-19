@@ -1212,7 +1212,7 @@ function displayEntireModel(model){
 
 function renderAbc(abc){
     // console.log(abc);
-    ABCJS.renderAbc('sheet-music', abc, {staffwidth: document.querySelector('.container').innerWidth});
+    ABCJS.renderAbc('sheet-music', abc, {staffwidth: Math.floor(document.querySelector('.container').offsetWidth * 0.98)});
     ABCJS.renderMidi('midi-player', abc, {generateDownload: true});
 }
 
