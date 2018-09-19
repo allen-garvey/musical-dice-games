@@ -1209,8 +1209,7 @@ function displayEntireModel(model){
 
 function renderAbc(abc){
     // console.log(abc);
-    ABCJS.renderAbc('sheet-music', abc);
-    ABCJS.renderMidi('midi-player', abc);
+    ABCJS.renderAbc('sheet-music', abc, {staffwidth: document.querySelector('.container').innerWidth});
     ABCJS.renderMidi('midi-player', abc, {generateDownload: true});
 }
 
