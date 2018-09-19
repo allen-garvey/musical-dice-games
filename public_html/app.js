@@ -33,7 +33,6 @@ function mozartModel(){
 
     return {
         voices: 2,
-        measuresPerLine: 8,
         header: `X:1
 T:Musical Dice Game
 C:Wolfgang Amadeus Mozart
@@ -746,7 +745,6 @@ V:2 clef=bass`,
 function haydnModel(){
     return {
         voices: 2,
-        measuresPerLine: 8,
         header: `X:1
 T:Musical Dice Game
 C:Joseph Haydn
@@ -1172,10 +1170,22 @@ V:2 clef=bass`,
 };
 }
 
+function getMeasuresPerLine(){
+    const width = window.innerWidth;
+
+    if(width >= 1200){
+        return 8;
+    }
+    if(width >= 800){
+        return 4;
+    }
+    return 2;
+}
+
 
 function generateAbc(model, measureArray){
     let abc = model.header + '\n';
-    const measuresPerLine = model.measuresPerLine;
+    const measuresPerLine = getMeasuresPerLine();
 
     for(let measureOffset=0;measureOffset<measureArray.length;measureOffset+=measuresPerLine){
         for(let voice=0;voice<model.voices;voice++){
@@ -1191,25 +1201,27 @@ function generateAbc(model, measureArray){
 }
 
 
-/*
-const model = mozartModel();
-// const abc = generateAbc(model, createRange(0, model.measures.length));
+//for debugging
+function displayEntireModel(model){
+    const abc = generateAbc(model, createRange(0, model.measures.length));
+    renderAbc(abc);
+}
 
-const permutation = createPermutation(model.combinations());
-console.log(permutation);
-const abc = generateAbc(model, permutation);
-*/
+function renderAbc(abc){
+    // console.log(abc);
+    ABCJS.renderAbc('sheet-music', abc);
+    ABCJS.renderMidi('midi-player', abc);
+}
+
+function generateAbcPermutationModelAction(buttonId, model){
+    document.getElementById(buttonId).addEventListener('click', ()=>{
+        const permutation = createPermutation(model.combinations());
+        console.log(permutation);
+        const abc = generateAbc(model, permutation);
+        renderAbc(abc);
+    });
+}
 
 
-const model = haydnModel();
-// const abc = generateAbc(model, createRange(0, model.measures.length));
-
-const permutation = createPermutation(model.combinations());
-console.log(permutation);
-const abc = generateAbc(model, permutation);
-
-
-console.log(abc);
-
-ABCJS.renderAbc('sheet-music', abc, {responsive: true, staffwidth: 1100});
-ABCJS.renderMidi('midi-player', abc);
+generateAbcPermutationModelAction('button-mozart', mozartModel());
+generateAbcPermutationModelAction('button-haydn', haydnModel());
