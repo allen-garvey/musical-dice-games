@@ -1188,7 +1188,7 @@ V:2 clef=bass`,
                 [
                     'e3 c',
                     'c G e c',
-                    'e g e c',,
+                    'e g e c',
                     'z c/2d/2 e c',
                     'e/2f/2g/2f/2 e/2d/2e/2c/2',
                     'c2 e2',
