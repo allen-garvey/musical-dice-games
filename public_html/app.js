@@ -1351,8 +1351,26 @@ function convertCpeBachModelAll(model){
         }
     }
 
-    console.log(measures);
+    return {
+        header: model.header,
+        voices: model.voices,
+        measures,
+    };
+}
 
+//convert separate treble/bass permutations to single measures in a permutation in the same format as haydn and mozart
+function convertCpeBachModelPermutation(model){    
+    const measures = [];
+
+    for(let measureContainer of model.measures){
+        const trebleMeasures = measureContainer[0];
+        const bassMeasures = measureContainer[1];
+        
+        measures.push([
+            trebleMeasures[Math.floor(Math.random() * trebleMeasures.length)],
+            bassMeasures[Math.floor(Math.random() * bassMeasures.length)],
+        ]);
+    }
 
     return {
         header: model.header,
@@ -1421,4 +1439,10 @@ generateAbcPermutationModelAction('button-mozart', mozartModel());
 generateAbcPermutationModelAction('button-haydn', haydnModel());
 
 
-displayEntireModel(convertCpeBachModelAll(cpeBachModel()));
+document.getElementById('button-cpe-bach').addEventListener('click', ()=>{
+    const model = cpeBachModel();
+    const abc = generateAbc(convertCpeBachModelPermutation(model), createRange(0, model.measures.length));
+    renderAbc(abc);
+});
+
+// displayEntireModel(convertCpeBachModelAll(cpeBachModel()));
