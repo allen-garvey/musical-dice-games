@@ -19,9 +19,8 @@ function createPermutation(combinations){
 
 function mozartModel(){
     const cadentialMeasure = [
-        '[g2 d2 B2 G2] z',
-        //multi note sixteenths look messed up when beamed
-        'G,, [B,/2G,/2] [G,/2F,/2] [^F,/2E,/2] [E,/2D,/2]',
+        '[1[g2 d2 B2 G2] z:|[2[g2 d2 B2 G2] z|]',
+        '[1G,, G,/2F,/2E,/2D,/2:|[2G,, B,/2G,/2^F,/2E,/2|]',
     ];
     const albertiBass = '[E,/2C,/2]G,/2[E,/2C,/2]G,/2[E,/2C,/2]G,/2';
 
@@ -1404,7 +1403,8 @@ function generateAbc(model, measureArray){
             abc += `[V:${voice+1}]`;
             for(let j=0;j<measuresPerLine && j+measureOffset < measureArray.length;j++){
                 const measure = model.measures[measureArray[j+measureOffset]][voice] || 'z z z';
-                abc += measure + '|';
+                const measureEnd = measure.endsWith('|]') ? '' : '|';
+                abc += measure + measureEnd;
             }
         }
     }
