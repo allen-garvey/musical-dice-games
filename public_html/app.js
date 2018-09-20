@@ -749,7 +749,7 @@ T:Musical Dice Game
 C:Joseph Haydn
 M:3/4
 L:1/4
-Q:120
+Q:105
 %%staves {1 2}
 K:G
 V:1 clef=treble
